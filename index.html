@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="store">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
-<body>
-    <script type="text/javascript" src="js/angular.min.js"></script>
+<body ng-controller="StoreController as store">
+<ul class="list-group" ng-hide="store.product.soldOut">
+    <li class="list-group-item" ng-repeat="product in store.products">
+
+        <h3>{{product.name}}</h3>
+
+        <div class="carousel" ng-show="product.images.length">
+            <img ng-src="{{product.images[0].full}}"/>
+            <ul ng class="img-thumbnail clearfix">
+                <li class="small img-thumbnail pull-left thumbnail" ng-repeat="image in product.images">
+                    <img ng-src="{{image.thumbs}}"/>
+                </li>
+            </ul>
+        </div>
+        <em class="pull-right">{{product.price | currency}}</em>
+        <button>Add to Cart</button>
+        <section ng-init="tab = 1">
+            <ul class="nav nav-tabs">
+                <li ng-class="{active:tab === 1}">
+                    <a href ng-click="tab = 1">Desc</a>
+                </li>
+                <li ng-class="{active:tab === 2}">
+                    <a href ng-click="tab = 2">Desc2</a>
+                </li>
+                <li ng-class="{active:tab === 3}">
+                    <a href ng-click="tab = 3">Desc3</a>
+                </li>
+                <div class="panel" ng-show="tab === 1">
+                    <h4>Desc</h4>
+
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="panel" ng-show="tab === 2">
+                    <h4>Desc2</h4>
+
+                    <p>None yet</p>
+                </div>
+                <div class="panel" ng-show="tab === 3">
+                    <h4>Desc3</h4>
+
+                    <p>None yet</p>
+                </div>
+            </ul>
+        </section>
+
+    </li>
+</ul>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
+
 </body>
+
 </html>
