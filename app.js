@@ -27,9 +27,9 @@
             color: '#CCC',
             faces: 14,
             images: [
-                "images/gem-02.gif",
-                "images/gem-05.gif",
-                "images/gem-09.gif"
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg"
             ],
             reviews: [{
                 stars: 5,
@@ -52,9 +52,9 @@
             color: '#EEE',
             faces: 12,
             images: [
-                "images/gem-01.gif",
-                "images/gem-03.gif",
-                "images/gem-04.gif",
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg"
             ],
             reviews: [{
                 stars: 3,
@@ -77,9 +77,9 @@
             color: '#000',
             faces: 6,
             images: [
-                "images/gem-06.gif",
-                "images/gem-07.gif",
-                "images/gem-09.gif"
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg",
+                "images/denis-bigus1.jpg"
             ],
             reviews: [{
                 stars: 1,
